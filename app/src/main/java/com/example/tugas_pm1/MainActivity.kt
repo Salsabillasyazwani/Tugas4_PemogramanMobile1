@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         val shareButton: Button = findViewById(R.id.share_text_button)
         shareButton.setOnClickListener{
             val text = shareEdit.text.toString()
-            Log.v("cek string", text)
             Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
             shareText(text)
         }
@@ -51,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openWebsite(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        Log.v("cek url", text)
         startActivity(intent)
     }
 
